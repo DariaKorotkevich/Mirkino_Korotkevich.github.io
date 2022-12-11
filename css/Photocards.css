@@ -1,0 +1,534 @@
+/* Общие стили */
+
+.hover-text-one {
+    display: flex;
+    flex-wrap: wrap;
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	text-align: center;
+}
+.hover-text-one figure {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	background: #527c82;
+	text-align: center;
+	cursor: pointer;
+}
+.hover-text-one figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	opacity: 0.8;
+}
+.hover-text-one figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+	pointer-events: none;
+}
+.hover-text-one figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hover-text-one figure h3 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+.hover-text-one figure h3 span {
+	font-weight: 800;
+}
+.hover-text-one figure h3,
+.hover-text-one figure p {
+	margin: 0;
+}
+.hover-text-one figure p {
+    display: flex;
+	letter-spacing: 1px;
+	font-size: 70%;
+}
+
+/* Эффект при наведении */
+figure.effect-text-three {
+	background: #527c82;
+}
+figure.effect-text-three img {
+	width: -webkit-calc(100% + 20px);
+	width: calc(100% + 20px);
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	transform: scale(1.1);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.card1{
+    width: 14em;
+    height: 14em;
+}
+.card2{
+    width: 10em;
+    height: 14em;
+}
+figure.effect-text-three:hover img {
+	opacity: 0.4;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.effect-text-three figcaption {
+	text-align: left;
+}
+figure.effect-text-three h3 {
+	position: relative;
+	overflow: hidden;
+	padding: 0.5em 0;
+}
+figure.effect-text-three h3::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #fff;
+	content: '';
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+figure.effect-text-three:hover h3::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.effect-text-three p {
+	padding: 1em 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(100%,0,0);
+	transform: translate3d(100%,0,0);
+}
+figure.effect-text-three:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+/* ------------------- */
+.hover-text-one-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+	text-align: center;
+    overflow: hidden;
+    /* border: 10px solid rgb(236, 4, 4); */
+    
+}
+.card22{
+    object-fit: cover;
+    width: 12em;
+    height: 3em;
+}
+.card3{
+    object-fit: cover;
+    width: 12em;
+    height: 3em;
+}
+.card4{
+    object-fit: cover;
+    width: 11em;
+    height: 4em;
+}
+.card5{
+    object-fit: cover;
+    width: 20em;
+    height: 3em;
+}
+.card6{
+    object-fit: cover;
+    width: 20em;
+    height: 3em;
+}
+.effect-text-three-1{
+    position: relative;
+    cursor: pointer;
+}
+.effect-text-three-1 figcaption{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    visibility:hidden;
+    transition: visibility, transform .5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    transform: translateY(3vh);
+    color: #fff;
+}
+.effect-text-three-1:hover figcaption{
+    transform: translateY(-3vh);
+    visibility: visible;
+    transition: visibility, transform .5s ease-in-out;
+}
+.effect-text-three-1 figcaption h3{
+    text-transform: uppercase;
+    word-spacing: -0.15em;
+	font-weight: 300;
+}
+figure.effect-text-three-1::after {
+	position: absolute;
+    content: '';
+	bottom: 67%;
+	left: 0;
+	width: 0%;
+	height: 3px;
+	background: #fff;
+    visibility: hidden;
+    transition: width .5s, transform .5s ease-in-out;
+}
+figure.effect-text-three-1:hover::after {
+    visibility: visible;
+	width: 100%;
+    transition: width .5s, transform .5s ease-in-out;
+}
+.effect-text-three-1 img{
+    height: 100%;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale(1.1);
+}
+.effect-text-three-1:hover img{
+    opacity: 0.4;
+	transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+.effect-text-three-1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+.effect-text-three-1::before{
+    background: #527c82;
+    transition: transform .5s ease-in-out;
+}
+.effect-text-three-1:hover::before{
+    transition: transform .5s ease-in-out;
+}
+
+
+
+
+.effect-text-three-2{
+    position: relative;
+    cursor: pointer;
+}
+.effect-text-three-2 figcaption{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    visibility:hidden;
+    transition: visibility, transform .5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    transform: translateY(3vh);
+    color: #fff;
+}
+.effect-text-three-2:hover figcaption{
+    transform: translateY(-3vh);
+    visibility: visible;
+    transition: visibility, transform .5s ease-in-out;
+}
+.effect-text-three-2 figcaption h3{
+    text-transform: uppercase;
+    word-spacing: -0.15em;
+	font-weight: 300;
+}
+figure.effect-text-three-2::after {
+	position: absolute;
+    content: '';
+	bottom: 67%;
+	left: 0;
+	width: 0%;
+	height: 3px;
+	background: #fff;
+    visibility: hidden;
+    transition: width .5s,transform .5s ease-in-out;
+	
+}
+figure.effect-text-three-2:hover::after {
+    visibility:visible;
+	width: 100%;
+    transition: width .5s,transform .5s ease-in-out;
+}
+.effect-text-three-2 img{
+    height: 100%;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale(1.1);
+}
+.effect-text-three-2:hover img{
+    opacity: 0.4;
+	transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+.effect-text-three-2::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+.effect-text-three-2::before{
+    background: #527c82;
+    transition: transform .5s ease-in-out;
+}
+.effect-text-three-2:hover::before{
+    transition: transform .5s ease-in-out;
+}
+
+.effect-text-three-3{
+    position: relative;
+    cursor: pointer;
+}
+.effect-text-three-3 figcaption{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    visibility:hidden;
+    transition: visibility, transform .5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    transform: translateY(3vh);
+    color: #fff;
+}
+.effect-text-three-3:hover figcaption{
+    transform: translateY(-3vh);
+    visibility: visible;
+    transition: visibility, transform .5s ease-in-out;
+}
+.effect-text-three-3 figcaption h3{
+    text-transform: uppercase;
+    word-spacing: -0.15em;
+	font-weight: 300;
+}
+figure.effect-text-three-3::after {
+	position: absolute;
+    content: '';
+	bottom: 67%;
+	left: 0;
+	width: 0%;
+	height: 3px;
+	background: #fff;
+    visibility: hidden;
+    transition: width .5s, transform .5s ease-in-out;
+	
+}
+figure.effect-text-three-3:hover::after {
+    visibility:visible;
+    width: 100%;
+    transition: width .5s,transform .5s ease-in-out;
+}
+.effect-text-three-3 img{
+    height: 100%;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale(1.1);
+}
+.effect-text-three-3:hover img{
+    opacity: 0.4;
+	transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+.effect-text-three-3::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+.effect-text-three-3::before{
+    background: #527c82;
+    transition: transform .5s ease-in-out;
+}
+.effect-text-three-3:hover::before{
+    transition: transform .5s ease-in-out;
+}
+
+/* ------------------- */
+
+.effect-text-three-4{
+    position: relative;
+    cursor: pointer;
+    margin-top: 2em;
+}
+.effect-text-three-4 figcaption{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    visibility:hidden;
+    transition: visibility, transform .5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content:center;
+    transform: translateY(3vh);
+    color: #fff;
+}
+.effect-text-three-4:hover figcaption{
+    transform: translateY(-3vh);
+    visibility: visible;
+    transition: visibility, transform .5s ease-in-out;
+}
+.effect-text-three-4 figcaption h3{
+    text-transform: uppercase;
+    word-spacing: -0.15em;
+	font-weight: 300;
+}
+figure.effect-text-three-4::after {
+	position: absolute;
+    content: '';
+	bottom: 66%;
+	left: 0;
+	width: 0%;
+	height: 3px;
+	background: #fff;
+    visibility: hidden;
+    transition: width .5s, transform .5s ease-in-out;
+	
+}
+figure.effect-text-three-4:hover::after {
+    visibility:visible;
+    width: 100%;
+    transition: width .5s, transform .5s ease-in-out;
+}
+.effect-text-three-4 img{
+    height: 100%;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale(1.1);
+}
+.effect-text-three-4:hover img{
+    opacity: 0.4;
+	transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+.effect-text-three-4::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+.effect-text-three-4::before{
+    background: #527c82;
+    transition: transform .5s ease-in-out;
+}
+.effect-text-three-4:hover::before{
+    transition: transform .5s ease-in-out;
+}
+/* ------------ */
+.effect-text-three-5{
+    position: relative;
+    cursor: pointer;
+    margin-top: 2em;
+}
+.effect-text-three-5 figcaption{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    visibility:hidden;
+    transition: visibility, transform .5s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    transform: translateY(3vh);
+    color: #fff;
+}
+.effect-text-three-5:hover figcaption{
+    transform: translateY(-3vh);
+    visibility: visible;
+    transition: visibility, transform .5s ease-in-out;
+}
+.effect-text-three-5 figcaption h3{
+    text-transform: uppercase;
+    word-spacing: -0.15em;
+	font-weight: 300;
+}
+.effect-text-three-5::after {
+	position: absolute;
+    content: '';
+	bottom: 66%;
+	left: 0;
+	width: 0%;
+	height: 3px;
+	background: #fff;
+    visibility: hidden;
+    transition: width .5s,transform .5s ease-in-out;
+	
+}
+figure.effect-text-three-5:hover::after {
+    visibility:visible;
+    width: 100%;
+    transition: width .5s, transform .5s ease-in-out;
+}
+.effect-text-three-5 img{
+    height: 100%;
+    transition: opacity 0.35s, transform 0.35s;
+    transform: scale(1.1);
+}
+.effect-text-three-5:hover img{
+    opacity: 0.4;
+	transform: translate3d(0,0,0);
+    transition: opacity 0.35s, transform 0.35s;
+}
+.effect-text-three-5::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+.effect-text-three-5::before{
+    background: #527c82;
+    transition: transform .5s ease-in-out;
+}
+.effect-text-three-5:hover::before{
+    transition: transform .5s ease-in-out;
+}

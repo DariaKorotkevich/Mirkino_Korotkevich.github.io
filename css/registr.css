@@ -1,0 +1,101 @@
+/*  */
+
+.forma{
+    display: flex;
+    justify-content: center;
+
+    margin-top: 10em;
+
+    
+
+}
+::placeholder{
+    color: rgb(79, 79, 205);
+    font-size: .8em;
+} 
+.registr{
+ 
+    /* position: relative;
+    left: 5em; */
+    width: 60%;
+
+    color: rgba(0, 0, 0, 0.918);
+    background-color: rgb(138, 131, 157);
+    margin-bottom: 2em ;
+    padding: 0em 0em 0em 0em;
+}
+.fieldset div{
+    display: block;
+    text-align: center;
+    font-size: 16px;
+}
+.f div{
+    display: block;
+    text-align: center;
+    font-size: 16px;
+}
+.legend{
+    font-size: 20px;
+}
+.input-name:focus{
+
+        color: rgb(251, 251, 251);
+        background-color: rgb(0, 0, 0);
+}
+.set:focus{
+    background-color: rgb(158, 96, 197);;
+    color:rgb(225, 225, 225);
+}
+.reset:focus{
+    background-color: rgb(158, 96, 197);
+    color:rgb(225, 225, 225);
+}
+.name{
+    display: block;
+    left: 30%;
+    text-align: center;
+
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.input-name{
+    margin-left: 1em;
+}
+.password{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.input-password{
+    margin-left: 1em;
+}
+.tel{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.input-tel{
+    margin-left: 1em;
+}
+.email{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    
+}
+.input-email{
+    margin-left: 1em;
+}
+.date{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.input-date{
+    margin-left: 1em;
+}
+.button{
+    display: inline-block;
+    margin-left: 85%;
+}

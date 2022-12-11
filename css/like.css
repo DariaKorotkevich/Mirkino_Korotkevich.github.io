@@ -1,0 +1,29 @@
+#like{
+    width: 8em;
+    height: 2em;
+    color: black;
+    background: orangered;
+    box-shadow: 10px 10px 15px -6px rgba(255, 60, 0, 0.849); /* top  */
+
+    border-radius: 5em;
+    font-size: 1em;
+    position: absolute;
+    top:0;
+    cursor: pointer;
+    z-index: 1;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+}
+.like canvas{
+    width:100%;
+    height: 100vh;
+    top:0;
+}
+.like{
+    position: relative;
+}
+/* .like::after{
+    position:absolute;
+    content: "0";
+    color:black;
+
+} */

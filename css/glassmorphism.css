@@ -1,0 +1,190 @@
+.Artical_Acards{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.Acards{
+    margin: 10em 0em;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 1340px){
+    .Acards{
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin: 10em 0em -3em 0em;
+    }
+    .Acard1,
+    .Acard2,
+    .Acard3{
+        padding: 3em 0em 3em 4em;
+    }
+    .Acard1{
+        padding-top: 0em;
+    }
+}
+.Acard1,
+.Acard2,
+.Acard3{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin:0em 0em 0em 4em; 
+}
+.box3,
+.box2,
+.box1{
+    position: relative;
+    top:-5em;
+    height: 20em;
+}
+.text3,
+.text2,
+.text1{
+    background:rgba(225, 225, 225, 0.212);
+    border-radius: 4%;
+    width: 15em;
+    height: auto;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
+    color:rgb(2, 2, 2);
+    
+    position:relative;
+
+    top: 5.3em;
+    left: -2.3em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.text2{
+    top: 3em;
+    left: -2.3em;
+}
+.text1,
+.text3{
+    top: 4em;
+    left: -2.3em;
+}
+.text3::after,.text3::before,.box3::after,.box3::before,
+.text2::after,.text2::before,.box2::after,.box2::before,
+.text1::after,.text1::before,.box1::after,.box1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.text3::before,.text3::after,
+.text2::before,.text2::after,
+.text1::before,.text1::after{
+    background-color: rgba(221, 221, 221, 0.368);
+    border-radius: 1%;
+    width: 3em;
+    height: 3em;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
+    
+    transform: skewX(-20deg);
+
+    transform: translate(1em,-10em);
+    visibility: hidden;
+}
+.text3::before,
+.text2::before,
+.text1::before{
+    transform: translate(11em,16em);
+}
+
+.box3:hover .text3::before,
+.box2:hover .text2::before,
+.box1:hover .text1::before{
+    animation-name: textBefore;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    visibility: visible;
+}
+.box3:hover .text3::after,
+.box2:hover .text2::after,
+.box1:hover .text1::after{
+    animation-name: textAfter;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    visibility: visible;
+}
+.box3::after,
+.box2::after,
+.box1::after{
+    background: linear-gradient(315deg, #45adad,#0f57dc);
+    border-radius: 2%;
+    width: 10em;
+    height: 20em;
+    visibility:visible;
+    z-index: -1;
+    transform: skewX(20deg);
+    box-shadow: 
+                10px -10px 15px -6px rgba(255, 60, 0, 0.849), /* top */
+                0px -10px 15px -6px  rgba(255, 111, 0, 0.849), /* right */
+                5px  0px  15px  0px  rgba(120, 10, 198, 0.3), /* bottom */
+                -5px  0px  15px  0px  rgba(000,000,000,0.3); /* left */
+}
+.box3::after{
+    background: linear-gradient(315deg,#210d48e8,#935cc0);
+}
+.box2::after{
+    background: linear-gradient(315deg, #dabe0b,#ff5e00);
+}
+.box3:hover::after,
+.box2:hover::after,
+.box1:hover::after{
+    animation-name: rectangleA;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes rectangleA{
+    from{
+        transform: skewX(20deg);
+    }
+    to{
+        transform: skewX(0deg);
+    }
+}
+@keyframes textAfter{
+    from{
+        transform: skewX(-20deg);
+        transform: translate(1em,-10em);
+        visibility: hidden;
+    }
+    to{
+        transform: skewX(0deg);
+        transform: translate(1em,-4em);
+        visibility: visible;
+    }
+}
+@keyframes textBefore{
+    from{
+        transform: skewX(-20deg);
+        transform: translate(11em,16em);
+        visibility: hidden;
+    }
+    to{
+        transform: skewX(0deg);
+        transform: translate(11em,11em);
+        visibility: visible;
+    }
+}
